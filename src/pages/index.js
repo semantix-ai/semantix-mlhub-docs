@@ -19,7 +19,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Get Started with Semantix ML Hub
+            Get Started
           </Link>
         </div>
       </div>

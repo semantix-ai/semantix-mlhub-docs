@@ -6,12 +6,7 @@ const FeatureList = [
   {
     title: "Getting Started",
     Svg: require("@site/static/img/illustration_getting_started.svg").default,
-    description: (
-      <>
-        Semantix ML Hub is the easiest way to get your Machine Learning project
-        up and running.
-      </>
-    ),
+    description: <>Get your Machine Learning project up and running.</>,
   },
   {
     title: "Feature Store",
@@ -21,12 +16,7 @@ const FeatureList = [
   {
     title: "AutoML",
     Svg: require("@site/static/img/illustration_automl.svg").default,
-    description: (
-      <>
-        Automatically generate an inference server. All you need is a feature
-        table.
-      </>
-    ),
+    description: <>Automatically generate an inference server from features.</>,
   },
 ];
 
