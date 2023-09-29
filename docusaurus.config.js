@@ -81,11 +81,11 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
-            position: "right",
-          },
+          // {
+          //   href: "https://github.com/facebook/docusaurus",
+          //   label: "GitHub",
+          //   position: "right",
+          // },
         ],
       },
       footer: {
