@@ -98,6 +98,22 @@ const config = {
                 label: "Getting Started",
                 to: "/docs/intro",
               },
+              {
+                label: "Feature Store",
+                to: "/docs/category/feature-store",
+              },
+              {
+                label: "AutoML",
+                to: "/docs/category/automl",
+              },
+              {
+                label: "Serving Models",
+                to: "/docs/category/serving-models",
+              },
+              {
+                label: "Account Management",
+                to: "/docs/category/account-management",
+              },
             ],
           },
           // {
