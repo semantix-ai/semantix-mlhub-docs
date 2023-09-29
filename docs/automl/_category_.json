@@ -1,0 +1,8 @@
+{
+  "label": "AutoML",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation on how to use AutoML to easily train Machine Learning models."
+  }
+}

@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Getting Started with Semantix ML Hub
-
+## 
 Welcome to Semantix ML Hub! This guide will help you get started with the basic workflow for building, deploying, and managing machine learning models with our platform.
 
 ### Signing Up
