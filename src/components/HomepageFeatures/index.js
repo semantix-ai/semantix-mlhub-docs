@@ -4,9 +4,9 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Getting Started",
-    Svg: require("@site/static/img/illustration_getting_started.svg").default,
-    description: <>Get your Machine Learning project up and running.</>,
+    title: "Inference Servers",
+    Svg: require("@site/static/img/illustration_server.svg").default,
+    description: <>Deploy inference servers.</>,
   },
   {
     title: "Feature Store",
