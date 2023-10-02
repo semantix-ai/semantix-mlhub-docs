@@ -23,6 +23,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "semantix-ai", // Usually your GitHub org/user name.
   projectName: "semantix-ml-hub", // Usually your repo name.
+  deploymentBranch: "gh-pages-deploy",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
