@@ -12,17 +12,17 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://semantix-ai.github.io",
+  url: "https://semantix-mlhub-docs.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/semantix-mlhub-docs/",
+  baseUrl: "/",
 
   plugins: [require.resolve("docusaurus-lunr-search")],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "semantix-ai", // Usually your GitHub org/user name.
-  projectName: "semantix-mlhub-docs", // Usually your repo name.
+  projectName: "semantix-mlhub-docs.github.io", // Usually your repo name.
   deploymentBranch: "gh-pages-deploy",
 
   onBrokenLinks: "throw",
