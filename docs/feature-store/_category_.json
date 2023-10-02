@@ -1,8 +1,0 @@
-{
-  "label": "Feature Store",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Documentation on how to store and handle data for Machine Learning in the Feature Store."
-  }
-}
