@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# AutoML / Overview
+# Overview
 
 Welcome to the **AutoML** feature of **Semantix ML Hub**. This section provides an overview of our comprehensive AutoML solution, designed to simplify and accelerate your machine learning model development process.
 
@@ -19,18 +19,22 @@ AutoML, or Automated Machine Learning, is a feature that automates the process o
 
 ## Step-by-Step Guide to Using AutoML
 
-1. **Select Features**:
-    - Navigate to the feature store.
+1. **AutoML Start Page**:
+    - Start by clicking on the AutoML button on the bar in the left of the initial page. ![automl_initial](/img/automl_initial.png)
+    - Click on `Start New Job` at the top of the page. ![automl_start_job](/img/automl_start_job.png)
+    - Arrive at the Form page to pass the parameters of your AutoML job. ![automl_forms](/img/automl_forms.png)
+2. **Select Features**:
+    - Select the Feature Table that you want to load data for training.
     - Browse and select the features you want to include in your model.
     - Click on 'Add to Model'.
-2. **Configure Model**:
+3. **Configure Model**:
     - Set your target variable by selecting the relevant column name.
     - Choose the type of task: 'Classification' or 'Regression'.
     - Select the metrics you want to evaluate your model on, such as accuracy, precision, or RMSE.
-3. **Start Training**:
+4. **Start Training**:
     - Once you've configured your model, click on the 'Train Model' button.
     - A progress bar will appear, showing the status of the training process.
-4. **Review Results**:
+5. **Review Results**:
     - After training is complete, navigate to the 'Results' tab.
     - Here, you can view detailed metrics and performance indicators of your trained model.
 
@@ -39,3 +43,4 @@ AutoML, or Automated Machine Learning, is a feature that automates the process o
 AutoML in Semantix ML Hub is designed to make machine learning model development as straightforward and efficient as possible. Whether you're a beginner or an experienced data scientist, our platform provides the tools you need to develop and publish models with ease.
 
 Remember, if you prefer coding, Semantix ML Hub also offers a Python SDK for a more hands-on approach. Happy modeling!
+ss
