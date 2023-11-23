@@ -15,7 +15,7 @@ const config = {
   url: "https://semantix-ai.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/semantix-mlhub-docs",
+  baseUrl: "/",
 
   plugins: [require.resolve("docusaurus-lunr-search")],
 
