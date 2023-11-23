@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksemantix_mlhub_docs=self.webpackChunksemantix_mlhub_docs||[]).push([[5959],{6540:e=>{e.exports=JSON.parse('{"permalink":"/semantix-mlhub-docs/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
