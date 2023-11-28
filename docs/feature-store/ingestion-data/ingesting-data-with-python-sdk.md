@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 # Ingesting Data with the Python SDK
 
@@ -20,9 +20,9 @@ Replace YOUR_API_KEY with your actual API key from your Semantix account. If you
 
 Then create a client instance:
 ```python
-from elemeno_ai_sdk.ml.features.feature_store import FeatureStore
+from elemeno_ai_sdk.ml.features.feature_table import FeatureTable
 
-feature_store = FeatureStore()
+ft = FeatureTable()
 ```
 
 ### Configuring the schema of your feature tables
@@ -32,68 +32,67 @@ You have the option to create the feature table schema definition via our GUI sc
 
 The first step is to create a JSON schema file. The file should look like:
 ```json
-{
-    "type": "object"
-    "properties": {
-        "sepal_id": {
-            "isKey": "true",
-            "type": "string"
-        },
-        "sepal_length": {
-            "type": "number"
-        },
-        "sepal_width": {
-            "type": "number"
-        },
-        "created_timestamp": {
-            "examples": ["1970-01-01T00:00:00+00:00"],
-            "format": "date-time",
-            "type": "string"
-        },
-        "event_timestamp": {
-            "examples": ["1970-01-01T00:00:00+00:00"],
-            "format": "date-time",
-            "type": "string"
-        },
-    },
+{  
+    "name": "creditcard_demo",  
+    "entities": ["id"],  
+    "schema": [  
+        {"name": "v1", "type": "float"},  
+        {"name": "v2", "type": "float"},
+        {"name": "v3", "type": "float"},
+        {"name": "v4", "type": "float"},
+        {"name": "class", "type": "int"},
+        {"name": "event_timestamp", "type": "timestamp"}
+    ]
 }
 ```
 Here are a few details about what is the schema file.
-- Business entity - In this example we defined a property called "sepal_id" with the attribute "isKey"= true. This is the unique identifier of our feature table. The entity identifier is required, you can have composed identifiers with multiple properties if necessary. When reading features, you will may want to use the entity identifier to filter features for specific entities.
-- Timestamp columns - The feature store requires that every feature table includs two timestamp columns, the "event_timestamp" and the "created_timestamp". The event timestamp means when the event happened in the source, when the event associated to this feature happened. The created timestamp must be part of the schema but you do not need to specify during ingestion, our system will include a value for this column using the current timestamp in the moment of ingestion.
+- name: This is the unique identifier of our feature table.
+- entities: The entity identifier is required, you can have composed identifiers with multiple properties if necessary. When reading features, you will may want to use the entity identifier to filter features for specific entities.
+- schema: This is all fields in the dataset. Adding field event_timestamp to filter features between data.
 
 Once you create your schema file you need to call the ingest schema method and create an instance of your feature table.
 
 ```python
-from elemeno_ai_sdk.ml.features.feature_table import FeatureTable
+import asyncio
 
-sepal_ft = FeatureTable("sepal_ft", feature_store)
-feature_store.ingest_schema(sepal_ft, "path_to_schema.json")
+asyncio.run(ft.create("./fs_schema.json"))
 ```
+
 ### Ingesting a Pandas DataFrame
 The simplest way to ingest data is directly from a Pandas DataFrame:
 
+Creating DataFrame
 ```python
 import pandas as pd
 
-sepal_df = pd.DataFrame({
-    'sepal_id': [1, 2, 3], 
-    'sepal_length': [0.3, 0.5, 0.93],
-    'sepal_width': [0.1, 0.25. 0.29],
+credicard_demo = pd.DataFrame({
+    'id': [1, 2, 3],
+    'v1': [0.3, 0.5, 0.93],
+    'v2': [0.1, 0.25, 0.29],
+    'v3': [0.1, 0.25, 0.29],
+    'v4': [0.1, 0.25, 0.29],
+    'class': [0, 1, 1],
     'event_timestamp': ['2022-07-14 18:08:05.488248', '2022-07-14 18:08:06.581331', '2022-07-15 11:20:03.900023']
 })
-
-result = feature_store.ingest(sepal_ft, sepal_df)
 ```
+
 This will ingest the DataFrame into the feature table sepal_ft created in the previous step.
+```python
+from elemeno_ai_sdk.ml.features.feature_store import FeatureStore
+
+fs = FeatureStore()
+asyncio.run(fs.ingest('creditcard_demo', credicard_demo))
+```
 
 ### Ingesting from other sources
 You can also ingest data from any other source by converting it to pandas dataframe. The example below reads. from a CSV file:
 
 ```python
-data = pd.read_csv(FILE_PATH)
+from elemeno_ai_sdk.ml.features.feature_store import FeatureStore
 
-result = feature_store.ingest(sepal_ft, data)
+data = pd.read_csv(FILE_PATH)
+fs = FeatureStore()
+asyncio.run(fs.ingest('creditcard_demo', credicard_demo))
 ```
 The source CSV in this example must have columns that match the properties you defined in the schema file.
 
