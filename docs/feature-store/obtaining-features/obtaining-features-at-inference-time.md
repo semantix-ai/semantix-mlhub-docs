@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 2
 ---
 # Obtaining Features at Inference Time
 
@@ -8,14 +8,19 @@ In Semantix ML Hub, retrieving features for online inference is a straightforwar
 ### Method Signature:
 
 ```python
-get_online_features(entities, requested_features=None)
+get_online_features(self, 
+                    feature_table_name: str, 
+                    entities: Dict[str, List], 
+                    features: List[str])
 ```
 
 ### Method Parameters:
 
-- `entities` (list): A list of entities for which you want to retrieve features. Entities represent the specific instances or entities for which you need feature values.
+- `feature_table_name` (str): The name of the feature view from which you want to retrieve features.
 
-- `requested_features` (list or None): An optional list of features you wish to retrieve. If set to None, all available features will be retrieved for the specified entities.
+- `entities` (Dict): A dict of entities for which you want to retrieve features. Entities represent the specific instances or entities for which you need feature values.
+
+- `features` (list or None): An optional list of features you wish to retrieve. If set to None, all available features will be retrieved for the specified entities.
 
 ### Output:
 
