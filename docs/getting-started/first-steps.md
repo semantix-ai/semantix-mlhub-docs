@@ -12,6 +12,6 @@ First, you'll need to sign up for a Semantix ML Hub account. You can sign up on 
 ### Creating Your First Project
 After logging in, you'll be taken to the Data Connectors page. Here you can connect to an external source of data or upload a simple CSV (not recommended for production use cases).
 
-To create a connection, click the button with the type of Data Connector you desire to use or on the "Add New" button on the top of the page. Provide the necessary information for configuring the connection and complete by clicking in "Add Data Connector". You can look at our documentation for learning [how to build an ingestion integration with your preferred data pipeline management tool](/docs/feature-store/ingesting-features-from-a-pipeline).
+To create a connection, click the button with the type of Data Connector you desire to use or on the "Add New" button on the top of the page. Provide the necessary information for configuring the connection and complete by clicking in "Add Data Connector". You can look at our documentation for learning [how to build an ingestion integration with your preferred data pipeline management tool](/docs/feature-store/ingestion-data/ingesting-features-from-a-pipeline).
 
 Once your data connector is created, you'll be taken to the feature table page so that you can start configuring your feature store.
