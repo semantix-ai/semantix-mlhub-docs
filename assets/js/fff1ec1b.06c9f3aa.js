@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksemantix_mlhub_docs=self.webpackChunksemantix_mlhub_docs||[]).push([[3133],{3748:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/semantix-mlhub-docs/blog/tags/docusaurus","allTagsPath":"/semantix-mlhub-docs/blog/tags","count":4}')}}]);
