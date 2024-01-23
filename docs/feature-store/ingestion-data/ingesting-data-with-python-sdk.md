@@ -53,9 +53,7 @@ Here are a few details about what is the schema file.
 Once you create your schema file you need to call the ingest schema method and create an instance of your feature table.
 
 ```python
-import asyncio
-
-asyncio.run(ft.create("./fs_schema.json"))
+await ft.create("./fs_schema.json")
 ```
 
 ### Ingesting a Pandas DataFrame
@@ -81,7 +79,7 @@ This will ingest the DataFrame into the feature table sepal_ft created in the pr
 from elemeno_ai_sdk.ml.features.feature_store import FeatureStore
 
 fs = FeatureStore()
-asyncio.run(fs.ingest('creditcard_demo', credicard_demo))
+await fs.ingest('creditcard_demo', credicard_demo)
 ```
 
 ### Ingesting from other sources
@@ -92,7 +90,7 @@ from elemeno_ai_sdk.ml.features.feature_store import FeatureStore
 
 data = pd.read_csv(FILE_PATH)
 fs = FeatureStore()
-asyncio.run(fs.ingest('creditcard_demo', credicard_demo))
+await fs.ingest('creditcard_demo', credicard_demo)
 ```
 The source CSV in this example must have columns that match the properties you defined in the schema file.
 
