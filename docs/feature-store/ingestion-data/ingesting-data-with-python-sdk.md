@@ -14,7 +14,7 @@ pip install elemeno-ai-sdk
 ### Creating a Client
 First you will need to export an environment variable with your Semantix ML Hub Api Key:
 ```bash
-export SEMANTIX_ML_APIKEY=<YOUR_API_KEY>
+export MLHUB_API_KEY=<YOUR_API_KEY>
 ```
 Replace YOUR_API_KEY with your actual API key from your Semantix account. If you don't have an API key, [check this page](/).
 

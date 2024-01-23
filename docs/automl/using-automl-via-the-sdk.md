@@ -49,7 +49,8 @@ To utilize the SDK effectively, you can perform the following actions:
          task=TASK, 
          scoring=SCORING, 
          num_features=NUM_FEATURES, 
-         generations=GENERATIONS
+         generations=GENERATIONS,
+         to_balance=TO_BALANCE
       )
    ```
    - The result of this command is just the `id` of the job.
